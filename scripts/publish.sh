@@ -29,7 +29,7 @@ then
   then
     git fetch upstream $TRAVIS_BRANCH-dist:$TRAVIS_BRANCH-dist
     git checkout $TRAVIS_BRANCH-dist
-    git merge -Xtheirs $TRAVIS_BRANCH --commit --ff
+    git merge -Xtheirs $TRAVIS_BRANCH --no-edit --ff
     git push upstream $TRAVIS_BRANCH-dist --force -v
   else
     git push upstream $TRAVIS_BRANCH:$TRAVIS_BRANCH-dist --force -v
